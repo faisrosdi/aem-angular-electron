@@ -1,31 +1,31 @@
 <div class="row justify-content-center mt-5">
-  <div class="col-xl-4 col-lg-4 col-md-8 col-sm-11 col-11 card">
-      <main class="w-100 m-auto p-3">
-          <form  #userLogin="ngForm"
-          (ngSubmit)="userLogin.valid && onSubmit(userLogin)">
-              <h1 class="h3 mb-3 fw-normal">Sign In</h1>
-              <div class="form-group my-2">
-                  <label for="floatingInput">Email</label>
-                  <input #username="ngModel" [(ngModel)]="model.username" name="username" class="form-control"
-                  placeholder="Ex. demo@example.com" type="email" required>
-                  <div *ngIf="username.invalid && (username.dirty || username.touched)">
-                      <small *ngIf="username.errors?.['required']" class="text-danger">
-                          Email is required.
-                      </small>
-                  </div>
-              </div>
-              <div class="form-group my-2">
-                  <label for="floatingInput">Password</label>
-                  <input #password="ngModel" [(ngModel)]="model.password" name="password" class="form-control"
-                  type="password" required>
-                  <div *ngIf="password.invalid && (password.dirty || password.touched)">
-                      <small *ngIf="password.errors?.['required']" class="text-danger">
-                          Password is required.
-                      </small>
-                  </div>
-              </div>
-              <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-          </form>
-      </main>
-  </div>
+    <div class="col-xl-4 col-lg-4 col-md-8 col-sm-11 col-11 card">
+        <main class="w-100 m-auto p-3">
+            <form  #userLogin="ngForm"
+            (ngSubmit)="userLogin.valid && onSubmit(userLogin)">
+                <h1 class="h3 mb-3 fw-normal">Sign In</h1>
+                <div class="form-group my-2">
+                    <label for="floatingInput">Email</label>
+                    <input #username="ngModel" [(ngModel)]="model.username" name="username" class="form-control"
+                    placeholder="Ex. demo@example.com" type="email" required>
+                    <div *ngIf="username.invalid && (username.dirty || username.touched)">
+                        <small *ngIf="username.errors?.['required']" class="text-danger">
+                            Email is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group my-2">
+                    <label for="floatingInput">Password</label>
+                    <input #password="ngModel" [(ngModel)]="model.password" name="password" class="form-control"
+                    type="password" required>
+                    <div *ngIf="password.invalid && (password.dirty || password.touched)">
+                        <small *ngIf="password.errors?.['required']" class="text-danger">
+                            Password is required.
+                        </small>
+                    </div>
+                </div>
+                <button class="w-100 btn btn-sm btn-primary" type="submit">Sign in</button>
+            </form>
+        </main>
+    </div>
 </div>
